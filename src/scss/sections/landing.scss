@@ -1,0 +1,116 @@
+@import '../colors.scss';
+.section--landing {
+  height: 100%;
+  min-height: 100vh;
+  @media (min-height: 1080px) {
+    min-height: 1080px;
+  }
+  .sectionContainer {
+    margin-bottom: 0;
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: transparent;
+    padding: 0 0 50px;
+  }
+  .logo {
+    width: 125px;
+  }
+  .logo-wrapper {}
+  .usp {
+    background-color: rgba(255, 255, 255, 0.8);
+    font-weight: 300;
+    max-width: 850px;
+    font-size: 2.3rem;
+    padding: 25px;
+    @include sm {
+      margin: 25px;
+      font-size: 2.6rem;
+    }
+    @include md {
+      margin: 50px 25px;
+      font-size: 2.9rem;
+    }
+  }
+  .link {
+    background-color: rgba(255, 255, 255, 0.8);
+    opacity: .99;
+    display: inline-block;
+    padding: 25px;
+    @include sm {
+      padding: 25px 50px;
+    }
+  }
+  .parallaxContainer {
+    transform-style: preserve-3d;
+  }
+  .parallaxItem {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+  .parallaxItem--tablet {
+    background: center bottom / contain no-repeat url('../assets/tablet-xs.png');
+    width: 420px;
+    height: 317px;
+    bottom: -50px;
+    right: -150px;
+    transform: translateZ(-30px) translateX(50px) translateY(-50px) scale(1.3);
+    @include sm {
+      width: 500px;
+      height: 377px;
+      bottom: -30px;
+      right: -125px;
+      background: center bottom / contain no-repeat url('../assets/tablet-sm.png');
+    }
+    @include md {
+      width: 600px;
+      height: 453px;
+      bottom: -50px;
+      right: -110px;
+      background: center bottom / contain no-repeat url('../assets/tablet-md.png');
+    }
+  }
+  .parallaxItem--plant {
+    background: center center no-repeat url('../assets/plant-xs.jpg');
+    right: 300px;
+    bottom: 0px;
+    width: 90px;
+    height: 96px;
+    transform: translateZ(-60px) translateX(-140px) translateY(-100px) scale(1.6);
+    @include sm {
+      right: 425px;
+      width: 125px;
+      height: 133px;
+      background: center center no-repeat url('../assets/plant-sm.jpg');
+    }
+    @include md {
+      right: 680px;
+      bottom: 20px;
+      width: 135px;
+      height: 144px;
+      background: center center no-repeat url('../assets/plant-md.jpg');
+    }
+  }
+  .parallaxItem--circle {
+    border-radius: 100%;
+    background-color: lighten($uxenYellow, 25%);
+    width: 550px;
+    height: 550px;
+    bottom: -315px;
+    right: -200px;
+    transform: translateZ(-100px) translateX(170px) translateY(10px) scale(2);
+    @include sm {
+      bottom: -275px;
+      right: -150px;
+    }
+    @include md {
+      width: 680px;
+      height: 680px;
+      bottom: -380px;
+      right: -75px;
+    }
+  }
+}

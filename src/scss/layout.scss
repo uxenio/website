@@ -1,0 +1,51 @@
+@import 'colors.scss';
+.main {
+  transform-style: preserve-3d;
+  perspective: 100px;
+  perspective-origin: center bottom;
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 100vh;
+  scroll-behavior: smooth;
+}
+
+.footer {
+  background-color: $uxenBlue;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff
+}
+
+.section {
+  display: flex;
+  justify-content: center;
+  transform-style: preserve-3d;
+  width: 100%;
+  position: relative;
+}
+
+.sectionContainer {
+  flex: 1;
+  max-width: 1280px;
+}
+
+.sectionContainer {
+  transform-style: preserve-3d;
+  display: flex;
+  justify-content: center;
+  margin: 25px;
+  @include sm {
+    margin: 50px;
+  }
+  @include md {
+    margin: 100px;
+  }
+}
+
+.content {
+  z-index: 100;
+  background-color: rgba(255, 255, 255, 0.9);
+  flex: 1;
+}

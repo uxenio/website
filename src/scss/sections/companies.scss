@@ -1,0 +1,56 @@
+@import '../colors.scss';
+.section--companies {
+  background-color: #fff;
+  .title {
+    text-align: center;
+  }
+  .sectionContainer {
+    @include sm {
+      margin-top: 0;
+    }
+    @include lg {
+      margin-top: 100px;
+    }
+  }
+  .companyList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 900px;
+    margin: 25px auto 0;
+    @include lg {
+      max-width: 1100px;
+    }
+  }
+  .companyList-item {
+    padding: 25px;
+  }
+  .companyList-item:nth-last-of-type(2),
+  .companyList-item:nth-last-of-type(1) {
+    display: none;
+    @include lg {
+      display: block;
+    }
+  }
+  .companyList-item:nth-last-of-type(4),
+  .companyList-item:nth-last-of-type(3) {
+    display: none;
+    @include sm {
+      display: block;
+    }
+  }
+  .companyList-item .logo-wrapper {
+    padding: 25px;
+    flex-grow: 1;
+    width: 200px;
+    height: 100px;
+    justify-content: center;
+    align-content: center;
+    display: flex;
+    background-color: lighten($uxenYellow, 25%);
+  }
+  .logo {
+    max-width: 150px;
+    max-height: 50px;
+  }
+}

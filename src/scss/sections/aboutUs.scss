@@ -1,0 +1,79 @@
+@import '../colors.scss';
+.section--aboutUs {
+  background-color: #fff;
+  .content {
+    padding: 0 50px 0 25px;
+  }
+  .title {
+    text-align: center;
+    @include md {
+      text-align: left;
+    }
+  }
+  .text {
+    margin: 10px 0 25px;
+    @include sm {
+      margin: 25px 0 50px;
+    }
+  }
+  .sectionContainer {
+    @include sm {
+      margin-top: 50px;
+    }
+    @include md {
+      margin-top: 0;
+    }
+  }
+  .parallaxContainer {
+    display: none;
+  }
+  @include md {
+    .parallaxContainer {
+      display: block;
+      height: 100%;
+      position: relative;
+      @include md {
+        min-width: 400px;
+        flex-basis: 45%;
+      }
+    }
+    .parallaxItem {
+      position: absolute;
+      right: 50px;
+      bottom: 0;
+    }
+    .parallaxItem--croissant {
+      $height: 175px;
+      height: $height;
+      width: 170px;
+      top: calc(50% - #{$height} / 2 - 60px);
+      right: 40px;
+      background: center center no-repeat url('../assets/croissant-xs.png');
+      z-index: 10;
+      @include lg {
+        $height: 205px;
+        height: $height;
+        width: 200px;
+        top: calc(50% - #{$height} / 2);
+        right: 40px;
+        background: center center no-repeat url('../assets/croissant-lg.png');
+      }
+    }
+    .parallaxItem--circle {
+      $height: 180px;
+      height: $height;
+      width: $height;
+      top: calc(50% - #{$height} / 2);
+      right: 65px;
+      border-radius: 100%;
+      background-color: lighten($uxenYellow, 25%);
+      @include lg {
+        $height: 275px;
+        height: $height;
+        width: $height;
+        top: calc(50% - #{$height} / 2+50px);
+        right: 70px;
+      }
+    }
+  }
+}

@@ -1,0 +1,60 @@
+@import '../colors.scss';
+.section--contactUs {
+  background-color: #fff;
+  .sectionContainer {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0;
+    @include md {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+  }
+  .content {
+    @include md {
+      margin: 25px 50px 25px 0px;
+    }
+  }
+  .title {
+    text-align: center;
+    @include md {
+      text-align: left;
+    }
+  }
+  .text {
+    margin: 10px 0 25px;
+    max-width: 490px;
+  }
+  .content--contactDetails {
+    margin: 25px 0;
+    @include md {
+      max-width: 40%;
+      margin: 75px 0 25px;
+      padding-left: 50px;
+      border-left: 2px dashed #ddd;
+    }
+  }
+  .content--contactDetails .icon {
+    width: 42px;
+    height: 42px;
+    margin-right: 15px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .content--contactDetails .icon--phone {
+    background: center bottom no-repeat url('../assets/icons/phone.png');
+  }
+  .content--contactDetails .icon--email {
+    background: center bottom no-repeat url('../assets/icons/email.png');
+  }
+  .content--contactDetails .icon--twitter {
+    background: center bottom no-repeat url('../assets/icons/twitter.png');
+  }
+  .content--contactDetails .icon--github {
+    background: center bottom no-repeat url('../assets/icons/github.png');
+  }
+  .contactDetails-contact {
+    font-size: 1.4rem;
+    padding-bottom: 25px;
+  }
+}

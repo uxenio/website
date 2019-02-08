@@ -1,0 +1,86 @@
+@import '../colors.scss';
+.section--services {
+  background-color: #fff;
+  .sectionContainer {
+    margin-top: 0px;
+    @include md {
+      margin-top: 75px;
+    }
+  }
+  .content {
+    margin-bottom: -25px;
+    padding: 25px;
+    @include sm {
+      margin-bottom: -50px;
+    }
+    @include md {
+      margin-bottom: 0;
+      order: 1;
+    }
+    @include lg {}
+  }
+  .title {
+    text-align: center;
+    margin-bottom: 10px;
+    @include sm {
+      margin-bottom: 25px;
+    }
+    @include md {
+      text-align: left;
+    }
+  }
+  .text--services {
+    margin-bottom: 50px;
+    @include sm {
+      margin-bottom: 75px;
+    }
+  }
+  .parallaxContainer {
+    height: 100%;
+    position: relative;
+    @include md {
+      min-width: 400px;
+      flex-basis: 45%;
+    }
+  }
+  .parallaxItem {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    @include md {
+      right: auto;
+      left: 0;
+    }
+  }
+  .parallaxItem--laptop {
+    $height: 269px;
+    height: $height;
+    width: 250px;
+    top: calc(50% - #{$height} / 2);
+    background: center center no-repeat url('../assets/laptop-xs.png');
+    z-index: 10;
+    @include lg {
+      $height: 323px;
+      height: $height;
+      width: 300px;
+      top: calc(50% - #{$height} / 2 - 50px);
+      left: 20px;
+      background: center center no-repeat url('../assets/laptop-lg.png');
+      transform: rotate(-5deg);
+    }
+  }
+  .parallaxItem--circle {
+    $height: 280px;
+    height: $height;
+    width: $height;
+    top: calc(50% - #{$height} / 2);
+    border-radius: 100%;
+    background-color: lighten($uxenYellow, 25%);
+    @include lg {
+      $height: 420px;
+      height: $height;
+      width: $height;
+      top: calc(50% - #{$height} / 2 - 30px);
+    }
+  }
+}

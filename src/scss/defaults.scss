@@ -1,0 +1,79 @@
+@import 'colors.scss';
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  margin: 0;
+  height: 100%;
+  font-size: 16px;
+  line-height: 1.45rem;
+  word-spacing: 0.05rem;
+  color: #282828;
+  letter-spacing: .0625rem;
+  line-height: 1.8em;
+  font-family: 'Thasadith', sans-serif;
+  font-weight: 700;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+h2 {
+  font-weight: 300;
+  font-size: 2.5rem;
+  line-height: 1.2em;
+}
+
+p {
+  font-size: 1.125rem;
+}
+
+// resetting links default style
+a {
+  text-decoration: none;
+  color: inherit;
+  &:active {
+    color: $uxenBlue;
+  }
+  &:visited {
+    color: inherit;
+  }
+}
+
+// setting new links style
+$links-sidePadding: 10px;
+$links-lineThickness: 3px;
+a {
+  position: relative;
+  font-size: 1.4rem;
+  display: inline-block;
+  padding-bottom: $links-lineThickness * 2;
+  cursor: pointer;
+  &::before,
+  &::after {
+    content: " ";
+    z-index: -1;
+    position: absolute;
+    left: -$links-sidePadding;
+    bottom: 0;
+    width: calc(100% + #{$links-sidePadding} * 2);
+    background-color: $uxenYellow;
+    min-height: $links-lineThickness;
+  }
+  &::after {
+    transform-origin: bottom;
+    height: calc(100% + #{$links-lineThickness} * 2);
+    transform: scaleY(0);
+    transition: transform linear 50ms;
+  }
+  &:hover::after {
+    transform: scaleY(1);
+  }
+}
