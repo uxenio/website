@@ -1,12 +1,14 @@
 @import 'colors.scss';
 .main {
-  transform-style: preserve-3d;
-  perspective: 100px;
-  perspective-origin: center bottom;
   overflow-x: hidden;
   overflow-y: auto;
   height: 100vh;
   scroll-behavior: smooth;
+  @include supportsPerspective {
+    transform-style: preserve-3d;
+    perspective: 100px;
+    perspective-origin: center bottom;
+  }
 }
 
 .footer {

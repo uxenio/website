@@ -39,18 +39,37 @@
       display: block;
     }
   }
-  .companyList-item .logo-wrapper {
-    padding: 25px;
-    flex-grow: 1;
+  .logo {
+    border: 25px solid lighten($uxenYellow, 25%);
+    display: flex;
+    flex: 1;
     width: 200px;
     height: 100px;
-    justify-content: center;
-    align-content: center;
-    display: flex;
-    background-color: lighten($uxenYellow, 25%);
+    min-width: 150px;
+    min-height: 50px;
   }
-  .logo {
-    max-width: 150px;
-    max-height: 50px;
+  .logo--lenovo {
+    background: lighten($uxenYellow, 25%) center center / contain no-repeat url('../assets/companies/lenovo.svg');
+  }
+  .logo--sg {
+    background: lighten($uxenYellow, 25%) center center / contain no-repeat url('../assets/companies/sg.svg');
+  }
+  .logo--rightmove {
+    background: lighten($uxenYellow, 25%) center center / contain no-repeat url('../assets/companies/rightmove.svg');
+  }
+  .logo--fleetway {
+    background: lighten($uxenYellow, 25%) center center / contain no-repeat url('../assets/companies/fleetway.svg');
+  }
+  .logo--lg {
+    background: lighten($uxenYellow, 25%) center center / contain no-repeat url('../assets/companies/lg.svg');
+  }
+  .logo--uefa {
+    background: lighten($uxenYellow, 25%) center center / contain no-repeat url('../assets/companies/uefa.svg');
+  }
+  .logo--CSC {
+    background: lighten($uxenYellow, 25%) center center / contain no-repeat url('../assets/companies/CSC.svg');
+  }
+  .logo--oasis {
+    background: lighten($uxenYellow, 25%) center center / contain no-repeat url('../assets/companies/oasis.svg');
   }
 }

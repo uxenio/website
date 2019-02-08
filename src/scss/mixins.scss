@@ -37,3 +37,9 @@ $xl: 1920px;
     @content;
   }
 }
+
+@mixin supportsPerspective {
+  @supports (perspective: 1px) {
+    @content;
+  }
+}
